@@ -143,14 +143,14 @@
           <button
             type="button"
             id="lang-en-btn"
-            class="min-h-[36px] px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap bg-[#6B00B6] text-white shadow-sm"
+            class="min-h-[36px] px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap text-[#4A3869] dark:text-white/70 hover:text-[#140826] dark:hover:text-white"
           >
             English
           </button>
           <button
             type="button"
             id="lang-pcm-btn"
-            class="min-h-[36px] px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap text-[#4A3869] dark:text-white/70 hover:text-[#140826] dark:hover:text-white"
+            class="min-h-[36px] px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap bg-[#D4AF37] text-[#0F071A] shadow-sm"
           >
             PH Pidgin
           </button>
@@ -166,7 +166,7 @@
           <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
             <div class="max-w-2xl">
               <div id="ui-subtitle" class="text-xs font-semibold text-[#9E7B1C] dark:text-[#D4AF37] mb-1">
-                Davidic Generation Church · Port Harcourt Transit Guide
+                Davidic Generation Church · PH Street & Bus Stop Guide
               </div>
 
               <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight leading-tight mb-1.5">
@@ -174,7 +174,7 @@
                   id="ui-hero-title"
                   class="bg-gradient-to-r from-[#140826] via-[#52008C] to-[#7B1FA2] dark:from-white dark:via-[#E8D5B5] dark:to-[#C58AF9] bg-clip-text text-transparent"
                 >
-                  Find Your Way Home to DGC
+                  Find Your Way Enter DGC Without Stress
                 </span>
               </h1>
 
@@ -204,13 +204,13 @@
             <!-- Driver Instruction Callout -->
             <div class="rounded-2xl p-4 bg-[#F7F4FC] dark:bg-[#0F071A]/80 border border-[#D4AF37]/30 lg:max-w-sm w-full shrink-0">
               <div id="ui-driver-label" class="text-[11px] font-semibold text-[#9E7B1C] dark:text-[#D4AF37] mb-1">
-                Tell Your Keke or Bus Driver
+                Wetin You Go Tell Keke or Bus Driver
               </div>
               <p id="ui-driver-quote" class="text-sm font-bold text-[#140826] dark:text-white leading-snug">
-                “Drop me at Car Wash Junction, Elioparanwo Road (by No. 42 — Davidic Generation Church).”
+                “Oga abeg, drop me for Car Wash Junction inside Elioparanwo Road (near No. 42, DGC Church)!”
               </p>
               <div class="mt-2.5 pt-2.5 border-t border-[#6B00B6]/10 dark:border-white/10 flex items-center justify-between text-xs text-[#4A3869] dark:text-white/70">
-                <span id="ui-driver-footer">Final Hub: Gateway / St. John's</span>
+                <span id="ui-driver-footer">Last Stop: Gateway or St. John's</span>
                 <span class="font-mono font-semibold text-[#6B00B6] dark:text-[#D4AF37] tabular-nums">10 Hubs</span>
               </div>
             </div>
@@ -223,7 +223,7 @@
               for="route-search-input"
               class="block text-xs sm:text-sm font-semibold text-[#311B4E] dark:text-white/90 mb-2"
             >
-              Where are you starting your journey from?
+              Which side for PH you dey commot from today?
             </label>
             <div class="relative group">
               <div
@@ -663,7 +663,7 @@
 
         const STORAGE_KEY_PROGRESS = 'dgc_finder_journey_progress_v2';
         const STORAGE_KEY_THEME = 'dgc_finder_theme_v3';
-        const STORAGE_KEY_LANG = 'dgc_finder_lang_v2';
+        const STORAGE_KEY_LANG = 'dgc_finder_lang_v3';
 
         const UI_COPY = {
           en: {
@@ -788,9 +788,9 @@
           { color: '#FFFFFF', tx: '38px', rot: '-150deg', delay: '75ms' },
         ];
 
-        // Application State (Default Theme: Light Mode -> isDark: false)
+        // Application State (Default Language: PH Pidgin 'pcm', Default Theme: Light Mode 'isDark: false')
         let state = {
-          lang: 'en',
+          lang: 'pcm',
           isDark: false,
           searchQuery: '',
           selectedRouteId: 'choba',
@@ -803,7 +803,11 @@
         // Load persisted state
         try {
           const savedLang = localStorage.getItem(STORAGE_KEY_LANG);
-          if (savedLang === 'pcm' || savedLang === 'en') state.lang = savedLang;
+          if (savedLang === 'pcm' || savedLang === 'en') {
+            state.lang = savedLang;
+          } else {
+            state.lang = 'pcm';
+          }
 
           const savedTheme = localStorage.getItem(STORAGE_KEY_THEME);
           if (savedTheme === 'dark') {
