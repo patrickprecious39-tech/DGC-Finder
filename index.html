@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
@@ -69,11 +69,11 @@
     </style>
   </head>
 
-  <body class="min-h-screen flex flex-col bg-[#F8F6FC] dark:bg-[#0F071A] text-[#140826] dark:text-white antialiased selection:bg-[#A600FF] selection:text-white transition-colors duration-200">
-    <!-- Ambient Royal Glow Backdrop -->
+  <body class="min-h-screen flex flex-col bg-[#F9F8FC] dark:bg-[#0F071A] text-[#140826] dark:text-white antialiased selection:bg-[#6B00B6] selection:text-white transition-colors duration-200">
+    <!-- Subdued Ambient Background Glow -->
     <div aria-hidden="true" class="pointer-events-none fixed inset-0 overflow-hidden z-0">
-      <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[620px] h-[340px] rounded-full bg-[#6B00B6]/15 dark:bg-[#A600FF]/18 blur-[110px]"></div>
-      <div class="absolute top-1/3 -right-28 w-[360px] h-[360px] rounded-full bg-[#D4AF37]/10 dark:bg-[#D4AF37]/10 blur-[100px]"></div>
+      <div class="absolute -top-36 left-1/2 -translate-x-1/2 w-[580px] h-[300px] rounded-full bg-[#6B00B6]/[0.04] dark:bg-[#A600FF]/[0.07] blur-[120px]"></div>
+      <div class="absolute top-1/3 -right-32 w-[340px] h-[340px] rounded-full bg-[#D4AF37]/[0.04] dark:bg-[#D4AF37]/[0.05] blur-[110px]"></div>
     </div>
 
     <!-- Floating Toast Notification -->
@@ -81,7 +81,7 @@
       id="toast-container"
       role="status"
       aria-live="polite"
-      class="hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 max-w-md w-[calc(100%-2rem)] px-4 py-3 rounded-2xl bg-[#1A0E2E] text-white border border-[#D4AF37]/60 shadow-2xl items-center gap-3 transition-all duration-200"
+      class="hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 max-w-md w-[calc(100%-2rem)] px-4 py-3 rounded-2xl bg-[#1A0E2E] text-white border border-[#D4AF37]/50 shadow-xl items-center gap-3 transition-all duration-200"
     >
       <span class="w-7 h-7 rounded-lg bg-[#D4AF37]/20 text-[#D4AF37] flex items-center justify-center shrink-0">
         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -103,10 +103,10 @@
     </div>
 
     <!-- TOP HEADER: Clean & Uncluttered — DGC Logo + Title + [ English | PH Pidgin ] Segmented Toggle -->
-    <header class="sticky top-0 z-30 h-16 backdrop-blur-md bg-white/90 dark:bg-[#0F071A]/90 border-b border-[#6B00B6]/15 dark:border-white/10">
+    <header class="sticky top-0 z-30 h-16 backdrop-blur-md bg-white/90 dark:bg-[#0F071A]/90 border-b border-[#6B00B6]/10 dark:border-white/10">
       <div class="max-w-7xl mx-auto h-full px-4 sm:px-6 flex items-center justify-between gap-4">
         <a href="#top" class="flex items-center gap-3 whitespace-nowrap shrink-0">
-          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#1A0E2E] via-[#2B124C] to-[#0F071A] border border-[#D4AF37]/45 p-1.5 flex items-center justify-center shrink-0 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-[#1A0E2E] border border-[#D4AF37]/40 p-1.5 flex items-center justify-center shrink-0 shadow-sm">
             <img
               id="header-logo"
               src="logo.webp"
@@ -138,12 +138,12 @@
         <div
           role="group"
           aria-label="Select Language"
-          class="inline-flex items-center p-1 rounded-xl bg-[#EDE6F7] dark:bg-[#1A0E2E] border border-[#6B00B6]/20 dark:border-[#D4AF37]/30 shrink-0"
+          class="inline-flex items-center p-1 rounded-xl bg-[#F1ECF8] dark:bg-[#1A0E2E] border border-[#6B00B6]/15 dark:border-[#D4AF37]/25 shrink-0"
         >
           <button
             type="button"
             id="lang-en-btn"
-            class="min-h-[36px] px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap bg-gradient-to-r from-[#A600FF] to-[#6B00B6] text-white shadow-sm"
+            class="min-h-[36px] px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap bg-[#6B00B6] text-white shadow-sm"
           >
             English
           </button>
@@ -162,39 +162,28 @@
     <main id="top" class="relative z-10 flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 pt-6 pb-16">
       <!-- HERO SECTION & SMART SEARCH -->
       <section class="mb-8">
-        <div class="rounded-3xl p-5 sm:p-8 bg-white dark:bg-[#1A0E2E]/90 border border-[#6B00B6]/20 dark:border-[#6B00B6]/50 shadow-xl shadow-[#6B00B6]/5">
+        <div class="rounded-3xl p-5 sm:p-8 bg-white dark:bg-[#160C28] border border-[#6B00B6]/12 dark:border-white/10 shadow-sm">
           <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
             <div class="max-w-2xl">
-              <div id="ui-subtitle" class="text-xs font-semibold text-[#9E7B1C] dark:text-[#D4AF37] mb-1.5">
+              <div id="ui-subtitle" class="text-xs font-semibold text-[#9E7B1C] dark:text-[#D4AF37] mb-1">
                 Davidic Generation Church · Port Harcourt Transit Guide
               </div>
 
-              <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight leading-tight mb-2.5">
+              <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight leading-tight mb-1.5">
                 <span
                   id="ui-hero-title"
-                  class="bg-gradient-to-r from-[#9E7B1C] via-[#6B00B6] to-[#A600FF] dark:from-[#D4AF37] dark:via-[#F3E5AB] dark:to-[#A600FF] bg-clip-text text-transparent"
+                  class="bg-gradient-to-r from-[#140826] via-[#52008C] to-[#7B1FA2] dark:from-white dark:via-[#E8D5B5] dark:to-[#C58AF9] bg-clip-text text-transparent"
                 >
                   Find Your Way Home to DGC
                 </span>
               </h1>
 
-              <div class="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs sm:text-sm text-[#4A3869] dark:text-white/80">
-                <svg
-                  class="w-4 h-4 text-[#A600FF] dark:text-[#D4AF37] shrink-0"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
-                  <circle cx="12" cy="10" r="3"></circle>
-                </svg>
+              <!-- Shifted-up Address Text & Aligned View on Map Link (No standalone location icon) -->
+              <div class="flex flex-wrap items-baseline gap-x-2.5 gap-y-1 text-xs sm:text-sm text-[#4A3869] dark:text-white/80">
                 <span class="font-medium">
                   No. 42 Elioparanwo Rd, By Car Wash Junction, Port Harcourt
                 </span>
-                <span aria-hidden="true" class="opacity-40">·</span>
+                <span aria-hidden="true" class="opacity-35">·</span>
                 <a
                   id="hero-map-link"
                   href="https://www.google.com/maps/search/?api=1&query=42+Elioparanwo+Road+Car+Wash+Junction+Port+Harcourt"
@@ -203,7 +192,7 @@
                   class="inline-flex items-center gap-1 font-semibold text-[#6B00B6] dark:text-[#D4AF37] hover:underline whitespace-nowrap"
                 >
                   <span id="ui-view-on-map">View on Map</span>
-                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg class="w-3.5 h-3.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                     <polyline points="15 3 21 3 21 9"></polyline>
                     <line x1="10" y1="14" x2="21" y2="3"></line>
@@ -213,7 +202,7 @@
             </div>
 
             <!-- Driver Instruction Callout -->
-            <div class="rounded-2xl p-4 bg-[#F5F0FF] dark:bg-[#0F071A]/90 border border-[#D4AF37]/40 lg:max-w-sm w-full shrink-0">
+            <div class="rounded-2xl p-4 bg-[#F7F4FC] dark:bg-[#0F071A]/80 border border-[#D4AF37]/30 lg:max-w-sm w-full shrink-0">
               <div id="ui-driver-label" class="text-[11px] font-semibold text-[#9E7B1C] dark:text-[#D4AF37] mb-1">
                 Tell Your Keke or Bus Driver
               </div>
@@ -239,11 +228,11 @@
             <div class="relative group">
               <div
                 aria-hidden="true"
-                class="-inset-0.5 rounded-2xl bg-gradient-to-r from-[#A600FF] via-[#D4AF37] to-[#6B00B6] opacity-30 group-focus-within:opacity-80 blur transition duration-200 pointer-events-none absolute"
+                class="-inset-0.5 rounded-2xl bg-gradient-to-r from-[#6B00B6]/20 via-[#D4AF37]/20 to-[#6B00B6]/20 opacity-0 group-focus-within:opacity-100 blur-sm transition duration-200 pointer-events-none absolute"
               ></div>
-              <div class="relative flex items-center bg-[#F8F6FC] dark:bg-[#0F071A] rounded-2xl border border-[#6B00B6]/30 dark:border-[#A600FF]/50 focus-within:border-[#A600FF] dark:focus-within:border-[#D4AF37] transition-colors">
+              <div class="relative flex items-center bg-[#F9F8FC] dark:bg-[#0F071A] rounded-2xl border border-[#6B00B6]/20 dark:border-white/15 focus-within:border-[#6B00B6] dark:focus-within:border-[#D4AF37] transition-colors">
                 <svg
-                  class="w-5 h-5 text-[#A600FF] dark:text-[#D4AF37] ml-4 shrink-0"
+                  class="w-5 h-5 text-[#6B00B6] dark:text-[#D4AF37] ml-4 shrink-0"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -263,7 +252,7 @@
                 <button
                   type="button"
                   id="clear-search-btn"
-                  class="hidden mr-2 min-w-[44px] min-h-[44px] rounded-xl items-center justify-center text-[#4A3869] dark:text-white/70 hover:text-[#A600FF] dark:hover:text-white transition-colors cursor-pointer"
+                  class="hidden mr-2 min-w-[44px] min-h-[44px] rounded-xl items-center justify-center text-[#4A3869] dark:text-white/70 hover:text-[#6B00B6] dark:hover:text-white transition-colors cursor-pointer"
                   aria-label="Clear search query"
                 >
                   <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -281,7 +270,7 @@
               <span id="ui-quick-select-prompt" class="text-xs font-medium text-[#4A3869] dark:text-white/65">
                 Popular Port Harcourt Hubs — Select your starting point:
               </span>
-              <span id="search-match-count" class="hidden text-xs font-mono text-[#A600FF] dark:text-[#D4AF37] tabular-nums"></span>
+              <span id="search-match-count" class="hidden text-xs font-mono text-[#6B00B6] dark:text-[#D4AF37] tabular-nums"></span>
             </div>
             <div id="quick-hubs-container" class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1"></div>
           </div>
@@ -293,7 +282,7 @@
     </main>
 
     <!-- FOOTER: With Dark/Light Theme Toggle neatly positioned at the bottom -->
-    <footer class="relative z-10 border-t border-[#6B00B6]/15 dark:border-white/10 bg-white/60 dark:bg-[#0F071A]/80 py-6 px-4 sm:px-6 text-xs text-[#4A3869] dark:text-white/65">
+    <footer class="relative z-10 border-t border-[#6B00B6]/10 dark:border-white/10 bg-white/70 dark:bg-[#0F071A]/80 py-6 px-4 sm:px-6 text-xs text-[#4A3869] dark:text-white/65">
       <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2 text-center sm:text-left">
           <span class="font-bold text-[#140826] dark:text-white">
@@ -309,7 +298,7 @@
             href="https://www.google.com/maps/search/?api=1&query=42+Elioparanwo+Road+Car+Wash+Junction+Port+Harcourt"
             target="_blank"
             rel="noopener noreferrer"
-            class="hover:text-[#A600FF] dark:hover:text-[#D4AF37] transition-colors whitespace-nowrap"
+            class="hover:text-[#6B00B6] dark:hover:text-[#D4AF37] transition-colors whitespace-nowrap"
           >
             Google Maps
           </a>
@@ -319,7 +308,7 @@
             href="https://wa.me/2348165992846"
             target="_blank"
             rel="noopener noreferrer"
-            class="hover:text-[#A600FF] dark:hover:text-[#D4AF37] transition-colors whitespace-nowrap"
+            class="hover:text-[#6B00B6] dark:hover:text-[#D4AF37] transition-colors whitespace-nowrap"
           >
             WhatsApp Follow-Up
           </a>
@@ -329,11 +318,11 @@
           <button
             type="button"
             id="theme-toggle-btn"
-            class="min-h-[38px] px-3.5 py-1.5 rounded-xl text-xs font-semibold border border-[#6B00B6]/25 dark:border-[#D4AF37]/35 bg-[#F3EEFA] dark:bg-[#1A0E2E] text-[#140826] dark:text-white hover:border-[#A600FF] dark:hover:border-[#D4AF37] transition-colors flex items-center gap-2 whitespace-nowrap cursor-pointer"
-            title="Switch between Dark and Light outdoor theme"
+            class="min-h-[38px] px-3.5 py-1.5 rounded-xl text-xs font-semibold border border-[#6B00B6]/20 dark:border-[#D4AF37]/30 bg-[#F3EEFA] dark:bg-[#1A0E2E] text-[#140826] dark:text-white hover:border-[#6B00B6] dark:hover:border-[#D4AF37] transition-colors flex items-center gap-2 whitespace-nowrap cursor-pointer"
+            title="Switch between Light and Dark theme"
           >
             <span id="theme-toggle-icon"></span>
-            <span id="theme-toggle-label">Light Mode</span>
+            <span id="theme-toggle-label">Dark Mode</span>
           </button>
         </div>
       </div>
@@ -673,7 +662,7 @@
             : DEFAULT_ROUTES_DATA;
 
         const STORAGE_KEY_PROGRESS = 'dgc_finder_journey_progress_v2';
-        const STORAGE_KEY_THEME = 'dgc_finder_theme_v2';
+        const STORAGE_KEY_THEME = 'dgc_finder_theme_v3';
         const STORAGE_KEY_LANG = 'dgc_finder_lang_v2';
 
         const UI_COPY = {
@@ -689,8 +678,8 @@
             searchPlaceholder:
               'Search your starting point (e.g., Choba, Artillery, Eleme, Mile 3, Uniport, Rumuola)...',
             quickSelectPrompt: 'Popular Port Harcourt Hubs — Select your starting point:',
-            corridorsHeader: 'Port Harcourt Transit Corridors',
-            tapToTrack: 'Select an area to view steps',
+            corridorsHeader: 'PH Bus Stop',
+            tapToTrack: 'Tap your area, make we move',
             activeRouteQuest: 'Active Route Guide',
             routeCorridorPrompt: 'Select Route Option:',
             journeyProgress: 'Journey Progress',
@@ -735,7 +724,7 @@
           pcm: {
             subtitle: 'Davidic Generation Church · PH Street & Bus Stop Guide',
             heroTitle: 'Find Your Way Enter DGC Without Stress',
-            viewOnMap: 'Open Map Pin',
+            viewOnMap: 'View on Map',
             driverCalloutLabel: 'Wetin You Go Tell Keke or Bus Driver',
             driverCalloutQuote:
               '“Oga abeg, drop me for Car Wash Junction inside Elioparanwo Road (near No. 42, DGC Church)!”',
@@ -744,8 +733,8 @@
             searchPlaceholder:
               'Type your junction or area (e.g., Choba, Artillery, Oil Mill, Mile 3, Uniport, Woji)...',
             quickSelectPrompt: 'Popular PH Junctions — Tap where you dey:',
-            corridorsHeader: 'All PH Bus Stop & Junction Routes',
-            tapToTrack: 'Tap your area make we move',
+            corridorsHeader: 'PH Bus Stop',
+            tapToTrack: 'Tap your area, make we move',
             activeRouteQuest: 'Your Active PH Movement',
             routeCorridorPrompt: 'Choose Which Road You Wan Follow:',
             journeyProgress: 'How Far You Don Move',
@@ -799,10 +788,10 @@
           { color: '#FFFFFF', tx: '38px', rot: '-150deg', delay: '75ms' },
         ];
 
-        // Application State
+        // Application State (Default Theme: Light Mode -> isDark: false)
         let state = {
           lang: 'en',
-          isDark: true,
+          isDark: false,
           searchQuery: '',
           selectedRouteId: 'choba',
           selectedSubRouteIndex: { choba: 0 },
@@ -817,7 +806,11 @@
           if (savedLang === 'pcm' || savedLang === 'en') state.lang = savedLang;
 
           const savedTheme = localStorage.getItem(STORAGE_KEY_THEME);
-          if (savedTheme === 'light') state.isDark = false;
+          if (savedTheme === 'dark') {
+            state.isDark = true;
+          } else {
+            state.isDark = false;
+          }
 
           const savedProgress = localStorage.getItem(STORAGE_KEY_PROGRESS);
           if (savedProgress) state.checkedStepsMap = JSON.parse(savedProgress);
@@ -990,20 +983,20 @@
         function renderStaticTexts() {
           const copy = UI_COPY[state.lang];
 
-          // Language buttons
+          // Language buttons with softer solid styling
           const enBtn = document.getElementById('lang-en-btn');
           const pcmBtn = document.getElementById('lang-pcm-btn');
           if (enBtn && pcmBtn) {
             if (state.lang === 'en') {
               enBtn.className =
-                'min-h-[36px] px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap bg-gradient-to-r from-[#A600FF] to-[#6B00B6] text-white shadow-sm';
+                'min-h-[36px] px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap bg-[#6B00B6] text-white shadow-sm';
               pcmBtn.className =
                 'min-h-[36px] px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap text-[#4A3869] dark:text-white/70 hover:text-[#140826] dark:hover:text-white';
             } else {
               enBtn.className =
                 'min-h-[36px] px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap text-[#4A3869] dark:text-white/70 hover:text-[#140826] dark:hover:text-white';
               pcmBtn.className =
-                'min-h-[36px] px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap bg-gradient-to-r from-[#D4AF37] to-[#9E7B1C] text-[#0F071A] shadow-sm';
+                'min-h-[36px] px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap bg-[#D4AF37] text-[#0F071A] shadow-sm';
             }
           }
 
@@ -1026,8 +1019,8 @@
           container.innerHTML = ACTIVE_HUBS.map((hub) => {
             const isSelected = !state.searchQuery && state.selectedRouteId === hub.id;
             const classes = isSelected
-              ? 'bg-gradient-to-r from-[#A600FF] to-[#6B00B6] text-white border-[#D4AF37]/60 shadow-md shadow-[#A600FF]/25'
-              : 'bg-[#F3EEFA] dark:bg-[#0F071A]/90 text-[#2B1644] dark:text-white/85 border-[#6B00B6]/15 dark:border-white/10 hover:border-[#A600FF]/60 dark:hover:border-[#D4AF37]/50';
+              ? 'bg-[#6B00B6] text-white border-[#6B00B6] dark:border-[#D4AF37]/50 shadow-sm'
+              : 'bg-[#F3EEFA] dark:bg-[#0F071A]/90 text-[#2B1644] dark:text-white/85 border-[#6B00B6]/15 dark:border-white/10 hover:border-[#6B00B6]/50 dark:hover:border-[#D4AF37]/50';
             return (
               '<button type="button" data-quick-hub="' +
               escapeHtml(hub.id) +
@@ -1069,9 +1062,9 @@
           if (filtered.length === 0) {
             workspace.innerHTML =
               '<section class="my-8">' +
-              '<div class="max-w-2xl mx-auto rounded-3xl p-6 sm:p-8 bg-white dark:bg-[#1A0E2E] border border-[#D4AF37]/50 shadow-xl text-center">' +
-              '<div class="w-14 h-14 rounded-2xl bg-[#A600FF]/15 border border-[#D4AF37]/40 flex items-center justify-center mx-auto mb-4">' +
-              '<svg class="w-7 h-7 text-[#A600FF] dark:text-[#D4AF37]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>' +
+              '<div class="max-w-2xl mx-auto rounded-3xl p-6 sm:p-8 bg-white dark:bg-[#160C28] border border-[#D4AF37]/40 shadow-sm text-center">' +
+              '<div class="w-14 h-14 rounded-2xl bg-[#6B00B6]/10 border border-[#D4AF37]/30 flex items-center justify-center mx-auto mb-4">' +
+              '<svg class="w-7 h-7 text-[#6B00B6] dark:text-[#D4AF37]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>' +
               '</div>' +
               '<h2 class="text-xl sm:text-2xl font-bold text-[#140826] dark:text-white mb-2">' +
               escapeHtml(copy.noMatchTitle) +
@@ -1084,7 +1077,7 @@
               '<div class="flex flex-col sm:flex-row items-center justify-center gap-3">' +
               '<a href="' +
               escapeHtml(getFollowUpHelpUrl(state.searchQuery)) +
-              '" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto min-h-[48px] px-6 py-3 rounded-xl bg-gradient-to-r from-[#A600FF] to-[#6B00B6] hover:from-[#9200E0] hover:to-[#590098] text-white font-bold text-sm flex items-center justify-center gap-2.5 shadow-lg shadow-[#A600FF]/30 active:scale-[0.98] transition-all whitespace-nowrap">' +
+              '" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto min-h-[48px] px-6 py-3 rounded-xl bg-[#6B00B6] hover:bg-[#580096] text-white font-bold text-sm flex items-center justify-center gap-2.5 shadow-sm active:scale-[0.98] transition-all whitespace-nowrap">' +
               '<svg class="w-5 h-5 text-[#D4AF37]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"></path></svg>' +
               '<span>' +
               escapeHtml(copy.askFollowUpBtn) +
@@ -1139,11 +1132,11 @@
                   : route.routes[optIdx].titleEn;
 
               const cardBorderClass = isActive
-                ? 'bg-white dark:bg-[#1A0E2E] border-[#A600FF] dark:border-[#D4AF37] shadow-lg shadow-[#A600FF]/15'
-                : 'bg-white/75 dark:bg-[#1A0E2E]/55 border-[#6B00B6]/15 dark:border-white/10 hover:border-[#A600FF]/50 dark:hover:border-white/25';
+                ? 'bg-white dark:bg-[#160C28] border-[#6B00B6] dark:border-[#D4AF37] shadow-sm'
+                : 'bg-white/80 dark:bg-[#160C28]/60 border-[#6B00B6]/12 dark:border-white/10 hover:border-[#6B00B6]/40 dark:hover:border-white/25';
 
               const badgeClass = isActive
-                ? 'bg-[#A600FF] text-white shadow-sm shadow-[#A600FF]/40'
+                ? 'bg-[#6B00B6] text-white'
                 : 'bg-[#F3EEFA] dark:bg-[#0F071A] text-[#9E7B1C] dark:text-[#D4AF37] border border-[#D4AF37]/30';
 
               return (
@@ -1171,7 +1164,7 @@
                   ? '<span aria-hidden="true">·</span><span class="text-[#6B00B6] dark:text-[#D4AF37] font-semibold">2 Options</span>'
                   : '') +
                 (matchedKw
-                  ? '<span aria-hidden="true">·</span><span class="text-[#A600FF] dark:text-[#D4AF37] font-semibold">Keyword: ' +
+                  ? '<span aria-hidden="true">·</span><span class="text-[#6B00B6] dark:text-[#D4AF37] font-semibold">Keyword: ' +
                     escapeHtml(matchedKw) +
                     '</span>'
                   : '') +
@@ -1184,7 +1177,7 @@
                   : '') +
                 '<svg class="w-5 h-5 transition-transform ' +
                 (isActive
-                  ? 'text-[#A600FF] dark:text-[#D4AF37] translate-x-0.5'
+                  ? 'text-[#6B00B6] dark:text-[#D4AF37] translate-x-0.5'
                   : 'text-[#4A3869]/50 dark:text-white/40') +
                 '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>' +
                 '</div></div></button>'
@@ -1201,8 +1194,8 @@
                 const tabTitle =
                   state.lang === 'pcm' ? rOption.titlePcm : rOption.titleEn;
                 const btnClasses = isTabActive
-                  ? 'bg-gradient-to-r from-[#A600FF] to-[#6B00B6] text-white shadow-md shadow-[#A600FF]/25 border border-[#D4AF37]/50'
-                  : 'text-[#311B4E] dark:text-white/75 hover:text-[#A600FF] dark:hover:text-white';
+                  ? 'bg-[#6B00B6] text-white shadow-sm border border-[#D4AF37]/40'
+                  : 'text-[#311B4E] dark:text-white/75 hover:text-[#6B00B6] dark:hover:text-white';
                 return (
                   '<button type="button" data-select-subroute="' +
                   rIdx +
@@ -1220,7 +1213,7 @@
               '<div class="text-xs font-semibold text-[#4A3869] dark:text-white/70 mb-2">' +
               escapeHtml(copy.routeCorridorPrompt) +
               '</div>' +
-              '<div role="tablist" class="grid grid-cols-1 sm:grid-cols-2 gap-2 p-1.5 rounded-2xl bg-[#F3EEFA] dark:bg-[#0F071A] border border-[#6B00B6]/15 dark:border-white/10">' +
+              '<div role="tablist" class="grid grid-cols-1 sm:grid-cols-2 gap-2 p-1.5 rounded-2xl bg-[#F3EEFA] dark:bg-[#0F071A] border border-[#6B00B6]/12 dark:border-white/10">' +
               tabButtons +
               '</div></div>';
           } else {
@@ -1244,21 +1237,21 @@
               const stepText = state.lang === 'pcm' ? step.pcm : step.en;
 
               const stepCardClass = isDone
-                ? 'bg-[#F9F5EB] dark:bg-[#1E1433] border-[#D4AF37] shadow-sm'
+                ? 'bg-[#FAF6EC] dark:bg-[#1C132E] border-[#D4AF37]/80'
                 : isNextUp
-                ? 'bg-[#F7F2FF] dark:bg-[#150A26] border-[#A600FF] shadow-md shadow-[#A600FF]/10'
-                : 'bg-[#FAF8FE] dark:bg-[#0F071A]/75 border-[#6B00B6]/15 dark:border-white/10 hover:border-[#A600FF]/50';
+                ? 'bg-[#F7F4FC] dark:bg-[#140B24] border-[#6B00B6] dark:border-[#A600FF]/70'
+                : 'bg-[#FCFBFE] dark:bg-[#0F071A]/75 border-[#6B00B6]/12 dark:border-white/10 hover:border-[#6B00B6]/40';
 
               const stepCircleClass = isDone
-                ? 'bg-[#D4AF37] text-[#0F071A] shadow-md shadow-[#D4AF37]/30 scale-105'
+                ? 'bg-[#D4AF37] text-[#0F071A] scale-105'
                 : isNextUp
-                ? 'bg-[#A600FF] text-white shadow-md shadow-[#A600FF]/30'
-                : 'bg-[#EDE6F7] dark:bg-[#1A0E2E] text-[#9E7B1C] dark:text-[#D4AF37] border border-[#D4AF37]/40';
+                ? 'bg-[#6B00B6] text-white'
+                : 'bg-[#EDE6F7] dark:bg-[#1A0E2E] text-[#9E7B1C] dark:text-[#D4AF37] border border-[#D4AF37]/35';
 
               const statusColorClass = isDone
                 ? 'text-[#9E7B1C] dark:text-[#D4AF37]'
                 : isNextUp
-                ? 'text-[#A600FF] dark:text-[#D4AF37]'
+                ? 'text-[#6B00B6] dark:text-[#D4AF37]'
                 : 'text-[#4A3869]/70 dark:text-white/45';
 
               const statusLabel = isDone
@@ -1330,27 +1323,26 @@
               formatRouteForWhatsApp(activeRouteItem, activeSubRoute)
             );
 
+          // Bus Stop Section Hierarchy: Prominent "PH Bus Stop" heading with vertical spacing and clean subheading underneath
           workspace.innerHTML =
             '<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">' +
-            '<aside class="lg:col-span-5 space-y-3">' +
-            '<div class="flex items-center justify-between px-1">' +
-            '<h2 class="text-sm font-bold text-[#311B4E] dark:text-white/90">' +
+            '<aside class="lg:col-span-5">' +
+            '<div class="px-1 mb-4">' +
+            '<h2 class="text-xl sm:text-2xl font-extrabold tracking-tight text-[#140826] dark:text-white">' +
             escapeHtml(copy.corridorsHeader) +
-            ' (' +
-            filtered.length +
-            ')</h2>' +
-            '<span class="text-xs text-[#4A3869] dark:text-white/60">' +
+            '</h2>' +
+            '<p class="mt-1.5 text-sm font-medium text-[#4A3869] dark:text-white/65">' +
             escapeHtml(copy.tapToTrack) +
-            '</span></div>' +
+            '</p></div>' +
             '<div class="space-y-2.5">' +
             leftListHtml +
             '</div></aside>' +
             '<section id="journey-tracker" class="lg:col-span-7 scroll-mt-20 space-y-6">' +
-            '<div class="rounded-3xl p-5 sm:p-7 bg-white dark:bg-[#1A0E2E] border border-[#6B00B6]/25 dark:border-[#A600FF]/45 shadow-2xl shadow-[#6B00B6]/10">' +
+            '<div class="rounded-3xl p-5 sm:p-7 bg-white dark:bg-[#160C28] border border-[#6B00B6]/15 dark:border-white/12 shadow-sm">' +
             '<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4 pb-5 border-b border-[#6B00B6]/10 dark:border-white/10">' +
             '<div>' +
             '<div class="flex items-center gap-2 text-xs font-semibold text-[#9E7B1C] dark:text-[#D4AF37] mb-1">' +
-            '<svg class="w-3.5 h-3.5 text-[#A600FF] dark:text-[#D4AF37]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>' +
+            '<svg class="w-3.5 h-3.5 text-[#6B00B6] dark:text-[#D4AF37]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>' +
             '<span>' +
             escapeHtml(copy.activeRouteQuest) +
             '</span><span aria-hidden="true">·</span><span>' +
@@ -1364,7 +1356,7 @@
             '</p></div>' +
             '<div class="flex items-center gap-2 shrink-0">' +
             (completedCount > 0
-              ? '<button type="button" data-action="reset-progress" class="min-h-[40px] px-3 py-1.5 rounded-xl text-xs font-semibold border border-[#6B00B6]/20 dark:border-white/15 text-[#4A3869] dark:text-white/80 hover:border-[#A600FF] dark:hover:border-[#D4AF37] flex items-center gap-1.5 transition-colors cursor-pointer whitespace-nowrap">' +
+              ? '<button type="button" data-action="reset-progress" class="min-h-[40px] px-3 py-1.5 rounded-xl text-xs font-semibold border border-[#6B00B6]/20 dark:border-white/15 text-[#4A3869] dark:text-white/80 hover:border-[#6B00B6] dark:hover:border-[#D4AF37] flex items-center gap-1.5 transition-colors cursor-pointer whitespace-nowrap">' +
                 '<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg>' +
                 '<span>' +
                 escapeHtml(copy.resetBtn) +
@@ -1375,8 +1367,8 @@
                 escapeHtml(copy.completeAllBtn) +
                 '</span></button>') +
             '</div></div>' +
-            // Progress Bar
-            '<div class="mt-5 p-4 rounded-2xl bg-[#F6F2FC] dark:bg-[#0F071A]/90 border border-[#6B00B6]/15 dark:border-white/10">' +
+            // Progress Bar (Subdued gradient)
+            '<div class="mt-5 p-4 rounded-2xl bg-[#F7F4FC] dark:bg-[#0F071A]/90 border border-[#6B00B6]/10 dark:border-white/10">' +
             '<div class="flex items-center justify-between gap-2 mb-2">' +
             '<span class="text-xs sm:text-sm font-bold text-[#140826] dark:text-white flex items-center gap-2">' +
             '<span>' +
@@ -1389,15 +1381,13 @@
             ' ' +
             escapeHtml(copy.checkpointsDone) +
             ')</span></span>' +
-            '<span class="font-mono text-sm sm:text-base font-extrabold text-[#A600FF] dark:text-[#D4AF37] tabular-nums">' +
+            '<span class="font-mono text-sm sm:text-base font-extrabold text-[#6B00B6] dark:text-[#D4AF37] tabular-nums">' +
             progressPercent +
             '%</span></div>' +
-            '<div class="w-full h-3 rounded-full bg-[#E5DCF5] dark:bg-[#1A0E2E] overflow-hidden p-0.5 border border-[#6B00B6]/15 dark:border-white/10">' +
-            '<div class="h-full rounded-full bg-gradient-to-r from-[#A600FF] via-[#C84BFF] to-[#D4AF37] transition-all duration-300" style="width:' +
+            '<div class="w-full h-2.5 rounded-full bg-[#E8E2F4] dark:bg-[#1A0E2E] overflow-hidden">' +
+            '<div class="h-full rounded-full bg-gradient-to-r from-[#6B00B6] to-[#D4AF37] transition-all duration-300" style="width:' +
             Math.max(progressPercent, 4) +
-            '%;box-shadow:' +
-            (progressPercent > 0 ? '0 0 14px rgba(166, 0, 255, 0.65)' : 'none') +
-            ';"></div></div>' +
+            '%;"></div></div>' +
             '<div class="mt-2 flex items-center justify-between text-[11px] text-[#4A3869] dark:text-white/60">' +
             '<span>' +
             escapeHtml(copy.tapEachCheckpoint) +
@@ -1412,16 +1402,16 @@
             // Arrival Card
             '<div class="relative overflow-hidden mt-6 rounded-2xl p-5 transition-all duration-300 border ' +
             (isJourneyComplete
-              ? 'bg-gradient-to-br from-[#2A0E4A] via-[#1A0E2E] to-[#3B260A] text-white border-[#D4AF37] shadow-xl shadow-[#D4AF37]/20'
-              : 'bg-[#F5F0FF] dark:bg-[#0F071A] border-[#D4AF37]/45') +
+              ? 'bg-[#1E1136] text-white border-[#D4AF37] shadow-md'
+              : 'bg-[#F7F4FC] dark:bg-[#0F071A] border-[#D4AF37]/35') +
             '">' +
             confettiHtml +
             '<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">' +
             '<div class="flex items-start gap-3.5">' +
             '<div class="w-11 h-11 rounded-2xl flex items-center justify-center shrink-0 border ' +
             (isJourneyComplete
-              ? 'bg-[#D4AF37] text-[#0F071A] border-white/40 shadow-lg shadow-[#D4AF37]/40'
-              : 'bg-[#D4AF37]/15 text-[#9E7B1C] dark:text-[#D4AF37] border-[#D4AF37]/40') +
+              ? 'bg-[#D4AF37] text-[#0F071A] border-white/30'
+              : 'bg-[#D4AF37]/15 text-[#9E7B1C] dark:text-[#D4AF37] border-[#D4AF37]/35') +
             '">' +
             '<svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg>' +
             '</div><div>' +
@@ -1455,7 +1445,7 @@
               : '') +
             '</div></div>' +
             // Action Buttons Dock
-            '<div class="mt-6 pt-6 border-t border-[#6B00B6]/15 dark:border-white/10">' +
+            '<div class="mt-6 pt-6 border-t border-[#6B00B6]/12 dark:border-white/10">' +
             '<div class="flex items-center justify-between mb-3">' +
             '<span class="text-xs font-bold text-[#311B4E] dark:text-white/90">' +
             escapeHtml(copy.actionDockTitle) +
@@ -1464,7 +1454,7 @@
             escapeHtml(copy.actionDockSub) +
             '</span></div>' +
             '<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">' +
-            '<button type="button" data-action="copy-whatsapp" class="min-h-[48px] px-4 py-3 rounded-2xl bg-gradient-to-r from-[#A600FF] to-[#6B00B6] hover:from-[#9500E6] hover:to-[#580096] text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2.5 shadow-lg shadow-[#A600FF]/25 active:scale-[0.98] transition-all cursor-pointer whitespace-nowrap">' +
+            '<button type="button" data-action="copy-whatsapp" class="min-h-[48px] px-4 py-3 rounded-2xl bg-[#6B00B6] hover:bg-[#580096] text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2.5 shadow-sm active:scale-[0.98] transition-all cursor-pointer whitespace-nowrap">' +
             '<svg class="w-4 h-4 text-[#D4AF37] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>' +
             '<span>' +
             escapeHtml(
@@ -1478,7 +1468,7 @@
             '</span></button>' +
             '<a href="' +
             escapeHtml(ACTIVE_CHURCH.googleMapsUrl) +
-            '" target="_blank" rel="noopener noreferrer" class="min-h-[48px] px-4 py-3 rounded-2xl bg-[#140826] dark:bg-[#0F071A] hover:bg-[#241142] text-white border border-[#D4AF37]/50 font-bold text-xs sm:text-sm flex items-center justify-center gap-2.5 shadow-md active:scale-[0.98] transition-all whitespace-nowrap">' +
+            '" target="_blank" rel="noopener noreferrer" class="min-h-[48px] px-4 py-3 rounded-2xl bg-[#140826] dark:bg-[#0F071A] hover:bg-[#241142] text-white border border-[#D4AF37]/40 font-bold text-xs sm:text-sm flex items-center justify-center gap-2.5 shadow-sm active:scale-[0.98] transition-all whitespace-nowrap">' +
             '<svg class="w-4 h-4 text-[#D4AF37] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"></path><circle cx="7" cy="17" r="2"></circle><path d="M9 17h6"></path><circle cx="17" cy="17" r="2"></circle></svg>' +
             '<span>' +
             escapeHtml(copy.openGoogleMapsBtn) +
@@ -1486,12 +1476,12 @@
             '<div class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-2.5">' +
             '<a href="' +
             escapeHtml(whatsAppShareUrl) +
-            '" target="_blank" rel="noopener noreferrer" class="min-h-[44px] px-3.5 py-2 rounded-xl bg-[#F3EEFA] dark:bg-[#0F071A]/80 border border-[#6B00B6]/20 dark:border-white/10 hover:border-[#A600FF] text-xs font-semibold text-[#2B1644] dark:text-white/85 flex items-center justify-center gap-2 transition-colors whitespace-nowrap">' +
-            '<svg class="w-3.5 h-3.5 text-[#A600FF] dark:text-[#D4AF37]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>' +
+            '" target="_blank" rel="noopener noreferrer" class="min-h-[44px] px-3.5 py-2 rounded-xl bg-[#F3EEFA] dark:bg-[#0F071A]/80 border border-[#6B00B6]/15 dark:border-white/10 hover:border-[#6B00B6] text-xs font-semibold text-[#2B1644] dark:text-white/85 flex items-center justify-center gap-2 transition-colors whitespace-nowrap">' +
+            '<svg class="w-3.5 h-3.5 text-[#6B00B6] dark:text-[#D4AF37]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>' +
             '<span>' +
             escapeHtml(copy.sendWhatsAppDirectBtn) +
             '</span></a>' +
-            '<button type="button" data-action="copy-address" class="min-h-[44px] px-3.5 py-2 rounded-xl bg-[#F3EEFA] dark:bg-[#0F071A]/80 border border-[#6B00B6]/20 dark:border-white/10 hover:border-[#D4AF37] text-xs font-semibold text-[#2B1644] dark:text-white/85 flex items-center justify-center gap-2 transition-colors cursor-pointer whitespace-nowrap">' +
+            '<button type="button" data-action="copy-address" class="min-h-[44px] px-3.5 py-2 rounded-xl bg-[#F3EEFA] dark:bg-[#0F071A]/80 border border-[#6B00B6]/15 dark:border-white/10 hover:border-[#D4AF37] text-xs font-semibold text-[#2B1644] dark:text-white/85 flex items-center justify-center gap-2 transition-colors cursor-pointer whitespace-nowrap">' +
             '<svg class="w-3.5 h-3.5 text-[#9E7B1C] dark:text-[#D4AF37]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>' +
             '<span>' +
             escapeHtml(
@@ -1501,7 +1491,7 @@
             ) +
             '</span></button></div></div></div>' +
             // Follow-Up Support Card
-            '<div class="rounded-3xl p-5 sm:p-6 bg-white dark:bg-[#1A0E2E]/85 border border-[#D4AF37]/35 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">' +
+            '<div class="rounded-3xl p-5 sm:p-6 bg-white dark:bg-[#160C28] border border-[#D4AF37]/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">' +
             '<div>' +
             '<div class="text-xs font-bold text-[#9E7B1C] dark:text-[#D4AF37] mb-1">' +
             escapeHtml(copy.needHelpLabel) +
@@ -1514,7 +1504,7 @@
             '</p></div>' +
             '<a href="' +
             escapeHtml(getFollowUpHelpUrl(state.searchQuery)) +
-            '" target="_blank" rel="noopener noreferrer" class="min-h-[44px] px-4 py-2.5 rounded-xl bg-[#D4AF37] hover:bg-[#e3be42] text-[#0F071A] font-extrabold text-xs sm:text-sm flex items-center gap-2 shrink-0 shadow-md shadow-[#D4AF37]/20 active:scale-95 transition-all whitespace-nowrap">' +
+            '" target="_blank" rel="noopener noreferrer" class="min-h-[44px] px-4 py-2.5 rounded-xl bg-[#D4AF37] hover:bg-[#e3be42] text-[#0F071A] font-extrabold text-xs sm:text-sm flex items-center gap-2 shrink-0 shadow-sm active:scale-95 transition-all whitespace-nowrap">' +
             '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"></path></svg>' +
             '<span>' +
             escapeHtml(copy.chatFollowUpBtn) +
