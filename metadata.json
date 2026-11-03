@@ -1,0 +1,8 @@
+{
+  "name": "DGC Finder — Port Harcourt Route Guide",
+  "description": "Interactive mobile-first transit and landmark route finder for Davidic Generation Church (DGC), No. 42 Elioparanwo Road, By Car Wash Junction, Port Harcourt.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
