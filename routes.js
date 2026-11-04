@@ -38,6 +38,9 @@ const routesData = [
   {
     id: "choba",
     area: "Choba / Uniport / Alakahia",
+    traffic: "slow",
+    trafficNoteEn: "Moderate flow around Choba & Location Junction",
+    trafficNotePcm: "Moving small-small for Choba & Location side",
     keywords: ["choba", "uniport", "alakahia", "rumuosi", "abuja campus", "east west road"],
     routes: [
       {
@@ -85,6 +88,9 @@ const routesData = [
   {
     id: "artillery",
     area: "Artillery / Rumuola / Rumuobiakani",
+    traffic: "slow",
+    trafficNoteEn: "Slow movement around Rumuola Flyover",
+    trafficNotePcm: "Motor plenty small for Rumuola junction",
     keywords: ["artillery", "rumuola", "rumuobiakani", "okporo", "aba road", "airforce"],
     routes: [
       {
@@ -114,6 +120,9 @@ const routesData = [
   {
     id: "rumuokoro",
     area: "Rumuokoro / Eliozu / Rukpokwu",
+    traffic: "choke",
+    trafficNoteEn: "Heavy traffic at Rumuokoro Roundabout",
+    trafficNotePcm: "E choke for Rumuokoro Roundabout — shine eye",
     keywords: ["rumuokoro", "eliozu", "rukpokwu", "igwuruta", "airport", "nkpolu", "eneka"],
     routes: [
       {
@@ -139,6 +148,9 @@ const routesData = [
   {
     id: "eleme",
     area: "Eleme Junction / Oil Mill / Oyigbo",
+    traffic: "choke",
+    trafficNoteEn: "Heavy traffic along Oil Mill & Eleme axis",
+    trafficNotePcm: "E choke small for Oil Mill / Eleme park side",
     keywords: ["eleme", "oil mill", "oyigbo", "akpajo", "igbo etche", "elelenwo"],
     routes: [
       {
@@ -168,6 +180,9 @@ const routesData = [
   {
     id: "mile3",
     area: "Mile 3 / Mile 1 / Diobu / Borokiri",
+    traffic: "slow",
+    trafficNoteEn: "Moderate loading traffic at Mile 3 Park",
+    trafficNotePcm: "Slow small for Mile 3 bus stop loading point",
     keywords: ["mile 3", "mile 1", "mile 2", "diobu", "borokiri", "town", "d-line", "dline", "ust", "rsu", "ikoku"],
     routes: [
       {
@@ -193,6 +208,9 @@ const routesData = [
   {
     id: "waterlines",
     area: "Waterlines / Garrison / GRA",
+    traffic: "free",
+    trafficNoteEn: "Smooth flow via Waterlines & Ada George",
+    trafficNotePcm: "Road free well for Waterlines / GRA axis",
     keywords: ["waterlines", "garrison", "gra", "new gra", "old gra", "presidential", "ororo", "agip"],
     routes: [
       {
@@ -218,6 +236,9 @@ const routesData = [
   {
     id: "ozuoba",
     area: "Ozuoba / Rumualogu / NTA Road",
+    traffic: "free",
+    trafficNoteEn: "Clear road along NTA & Location axis",
+    trafficNotePcm: "Road free — waka well sharp sharp",
     keywords: ["ozuoba", "nta", "rumualogu", "choba", "obiri ikwerre", "mgbuoba", "location"],
     routes: [
       {
@@ -243,6 +264,9 @@ const routesData = [
   {
     id: "rumuji",
     area: "Rumuji / Emohua / Ahoada (East-West Road)",
+    traffic: "free",
+    trafficNoteEn: "Steady highway flow into Choba Junction",
+    trafficNotePcm: "East-West Road free well enter Choba",
     keywords: ["rumuji", "emohua", "ibaa", "nvele", "ahoada", "east west"],
     routes: [
       {
@@ -268,6 +292,9 @@ const routesData = [
   {
     id: "slaughter",
     area: "Slaughter / Trans-Amadi / Peter Odili / Woji",
+    traffic: "slow",
+    trafficNoteEn: "Moderate flow around Slaughter Bridge",
+    trafficNotePcm: "Slow small for Slaughter / Trans-Amadi side",
     keywords: ["slaughter", "trans amadi", "peter odili", "woji", "odili road", "oginigba", "stadium road"],
     routes: [
       {
@@ -293,6 +320,9 @@ const routesData = [
   {
     id: "wimpy",
     area: "Wimpy / Iwofe / Rumuolumeni",
+    traffic: "free",
+    trafficNoteEn: "Clear movement via Wimpy & St. John's",
+    trafficNotePcm: "Road free for Wimpy & St. John's axis",
     keywords: ["wimpy", "iwofe", "rumuolumeni", "rumuepirikom", "iaue", "st johns", "agip"],
     routes: [
       {

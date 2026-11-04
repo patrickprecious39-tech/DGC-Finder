@@ -365,6 +365,9 @@
           {
             id: "choba",
             area: "Choba / Uniport / Alakahia",
+            traffic: "slow",
+            trafficNoteEn: "Moderate flow around Choba & Location Junction",
+            trafficNotePcm: "Moving small-small for Choba & Location side",
             keywords: ["choba", "uniport", "alakahia", "rumuosi", "abuja campus", "east west road"],
             routes: [
               {
@@ -412,6 +415,9 @@
           {
             id: "artillery",
             area: "Artillery / Rumuola / Rumuobiakani",
+            traffic: "slow",
+            trafficNoteEn: "Slow movement around Rumuola Flyover",
+            trafficNotePcm: "Motor plenty small for Rumuola junction",
             keywords: ["artillery", "rumuola", "rumuobiakani", "okporo", "aba road", "airforce"],
             routes: [
               {
@@ -441,6 +447,9 @@
           {
             id: "rumuokoro",
             area: "Rumuokoro / Eliozu / Rukpokwu",
+            traffic: "choke",
+            trafficNoteEn: "Heavy traffic at Rumuokoro Roundabout",
+            trafficNotePcm: "E choke for Rumuokoro Roundabout — shine eye",
             keywords: ["rumuokoro", "eliozu", "rukpokwu", "igwuruta", "airport", "nkpolu", "eneka"],
             routes: [
               {
@@ -466,6 +475,9 @@
           {
             id: "eleme",
             area: "Eleme Junction / Oil Mill / Oyigbo",
+            traffic: "choke",
+            trafficNoteEn: "Heavy traffic along Oil Mill & Eleme axis",
+            trafficNotePcm: "E choke small for Oil Mill / Eleme park side",
             keywords: ["eleme", "oil mill", "oyigbo", "akpajo", "igbo etche", "elelenwo"],
             routes: [
               {
@@ -495,6 +507,9 @@
           {
             id: "mile3",
             area: "Mile 3 / Mile 1 / Diobu / Borokiri",
+            traffic: "slow",
+            trafficNoteEn: "Moderate loading traffic at Mile 3 Park",
+            trafficNotePcm: "Slow small for Mile 3 bus stop loading point",
             keywords: ["mile 3", "mile 1", "mile 2", "diobu", "borokiri", "town", "d-line", "dline", "ust", "rsu", "ikoku"],
             routes: [
               {
@@ -520,6 +535,9 @@
           {
             id: "waterlines",
             area: "Waterlines / Garrison / GRA",
+            traffic: "free",
+            trafficNoteEn: "Smooth flow via Waterlines & Ada George",
+            trafficNotePcm: "Road free well for Waterlines / GRA axis",
             keywords: ["waterlines", "garrison", "gra", "new gra", "old gra", "presidential", "ororo", "agip"],
             routes: [
               {
@@ -545,6 +563,9 @@
           {
             id: "ozuoba",
             area: "Ozuoba / Rumualogu / NTA Road",
+            traffic: "free",
+            trafficNoteEn: "Clear road along NTA & Location axis",
+            trafficNotePcm: "Road free — waka well sharp sharp",
             keywords: ["ozuoba", "nta", "rumualogu", "choba", "obiri ikwerre", "mgbuoba", "location"],
             routes: [
               {
@@ -570,6 +591,9 @@
           {
             id: "rumuji",
             area: "Rumuji / Emohua / Ahoada (East-West Road)",
+            traffic: "free",
+            trafficNoteEn: "Steady highway flow into Choba Junction",
+            trafficNotePcm: "East-West Road free well enter Choba",
             keywords: ["rumuji", "emohua", "ibaa", "nvele", "ahoada", "east west"],
             routes: [
               {
@@ -595,6 +619,9 @@
           {
             id: "slaughter",
             area: "Slaughter / Trans-Amadi / Peter Odili / Woji",
+            traffic: "slow",
+            trafficNoteEn: "Moderate flow around Slaughter Bridge",
+            trafficNotePcm: "Slow small for Slaughter / Trans-Amadi side",
             keywords: ["slaughter", "trans amadi", "peter odili", "woji", "odili road", "oginigba", "stadium road"],
             routes: [
               {
@@ -620,6 +647,9 @@
           {
             id: "wimpy",
             area: "Wimpy / Iwofe / Rumuolumeni",
+            traffic: "free",
+            trafficNoteEn: "Clear movement via Wimpy & St. John's",
+            trafficNotePcm: "Road free for Wimpy & St. John's axis",
             keywords: ["wimpy", "iwofe", "rumuolumeni", "rumuepirikom", "iaue", "st johns", "agip"],
             routes: [
               {
@@ -901,6 +931,104 @@
           return filtered.find((r) => r.id === state.selectedRouteId) || filtered[0];
         }
 
+        const DEFAULT_TRAFFIC_MAP = {
+          choba: {
+            level: 'slow',
+            noteEn: 'Moderate flow around Choba & Location Junction',
+            notePcm: 'Moving small-small for Choba & Location side',
+          },
+          artillery: {
+            level: 'slow',
+            noteEn: 'Slow movement around Rumuola Flyover',
+            notePcm: 'Motor plenty small for Rumuola junction',
+          },
+          rumuokoro: {
+            level: 'choke',
+            noteEn: 'Heavy traffic at Rumuokoro Roundabout',
+            notePcm: 'E choke for Rumuokoro Roundabout — shine eye',
+          },
+          eleme: {
+            level: 'choke',
+            noteEn: 'Heavy traffic along Oil Mill & Eleme axis',
+            notePcm: 'E choke small for Oil Mill / Eleme park side',
+          },
+          mile3: {
+            level: 'slow',
+            noteEn: 'Moderate loading traffic at Mile 3 Park',
+            notePcm: 'Slow small for Mile 3 bus stop loading point',
+          },
+          waterlines: {
+            level: 'free',
+            noteEn: 'Smooth flow via Waterlines & Ada George',
+            notePcm: 'Road free well for Waterlines / GRA axis',
+          },
+          ozuoba: {
+            level: 'free',
+            noteEn: 'Clear road along NTA & Location axis',
+            notePcm: 'Road free — waka well sharp sharp',
+          },
+          rumuji: {
+            level: 'free',
+            noteEn: 'Steady highway flow into Choba Junction',
+            notePcm: 'East-West Road free well enter Choba',
+          },
+          slaughter: {
+            level: 'slow',
+            noteEn: 'Moderate flow around Slaughter Bridge',
+            notePcm: 'Slow small for Slaughter / Trans-Amadi side',
+          },
+          wimpy: {
+            level: 'free',
+            noteEn: "Clear movement via Wimpy & St. John's",
+            notePcm: "Road free for Wimpy & St. John's axis",
+          },
+        };
+
+        function getTrafficInfo(route) {
+          const fallback = DEFAULT_TRAFFIC_MAP[route && route.id] || {
+            level: 'free',
+            noteEn: 'Normal road flow',
+            notePcm: 'Road free well',
+          };
+          const level = (route && route.traffic) || fallback.level;
+          const note =
+            state.lang === 'pcm'
+              ? (route && route.trafficNotePcm) || fallback.notePcm
+              : (route && route.trafficNoteEn) || fallback.noteEn;
+
+          if (level === 'choke') {
+            return {
+              level: 'choke',
+              label: 'Choke',
+              dotClass: 'bg-rose-500 ring-4 ring-rose-500/20',
+              pillClass:
+                'bg-rose-500/10 text-rose-700 dark:text-rose-300 border-rose-500/25',
+              textClass: 'text-rose-600 dark:text-rose-400',
+              note: note,
+            };
+          }
+          if (level === 'slow') {
+            return {
+              level: 'slow',
+              label: 'Slow',
+              dotClass: 'bg-amber-500 ring-4 ring-amber-500/20',
+              pillClass:
+                'bg-amber-500/10 text-amber-800 dark:text-amber-300 border-amber-500/25',
+              textClass: 'text-amber-700 dark:text-amber-400',
+              note: note,
+            };
+          }
+          return {
+            level: 'free',
+            label: 'Free',
+            dotClass: 'bg-emerald-500 ring-4 ring-emerald-500/20',
+            pillClass:
+              'bg-emerald-500/10 text-emerald-800 dark:text-emerald-300 border-emerald-500/25',
+            textClass: 'text-emerald-700 dark:text-emerald-400',
+            note: note,
+          };
+        }
+
         function getFollowUpHelpUrl(customArea) {
           const filtered = getFilteredRoutes();
           const activeRouteItem = getActiveRouteItem(filtered);
@@ -1143,6 +1271,8 @@
                 ? 'bg-[#6B00B6] text-white'
                 : 'bg-[#F3EEFA] dark:bg-[#0F071A] text-[#9E7B1C] dark:text-[#D4AF37] border border-[#D4AF37]/30';
 
+              const trafficInfo = getTrafficInfo(route);
+
               return (
                 '<button type="button" data-select-route="' +
                 escapeHtml(route.id) +
@@ -1157,8 +1287,21 @@
                 String(idx + 1).padStart(2, '0') +
                 '</span>' +
                 '<div class="min-w-0">' +
-                '<div class="font-bold text-sm sm:text-base text-[#140826] dark:text-white leading-snug">' +
+                '<div class="flex flex-wrap items-center gap-2">' +
+                '<span class="font-bold text-sm sm:text-base text-[#140826] dark:text-white leading-snug">' +
                 escapeHtml(route.area) +
+                '</span>' +
+                '<span title="Typical Junction Flow: ' +
+                escapeHtml(trafficInfo.label + ' — ' + trafficInfo.note) +
+                '" class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-[11px] font-semibold border shrink-0 ' +
+                trafficInfo.pillClass +
+                '">' +
+                '<span class="w-2 h-2 rounded-full shrink-0 ' +
+                trafficInfo.dotClass +
+                '"></span>' +
+                '<span>' +
+                escapeHtml(trafficInfo.label) +
+                '</span></span>' +
                 '</div>' +
                 '<div class="mt-1 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-xs text-[#4A3869] dark:text-white/65">' +
                 '<span class="truncate">' +
@@ -1327,6 +1470,8 @@
               formatRouteForWhatsApp(activeRouteItem, activeSubRoute)
             );
 
+          const activeTrafficInfo = getTrafficInfo(activeRouteItem);
+
           // Bus Stop Section Hierarchy + Stacked 14px Semibold / 12px Medium Progress/Target & Sharp Actions
           workspace.innerHTML =
             '<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">' +
@@ -1335,9 +1480,15 @@
             '<h2 class="text-xl sm:text-2xl font-extrabold tracking-tight text-[#140826] dark:text-white">' +
             escapeHtml(copy.corridorsHeader) +
             '</h2>' +
-            '<p class="mt-1.5 text-sm font-medium text-[#4A3869] dark:text-white/65">' +
+            '<p class="mt-1 text-sm font-medium text-[#4A3869] dark:text-white/65">' +
             escapeHtml(copy.tapToTrack) +
-            '</p></div>' +
+            '</p>' +
+            '<div class="mt-2.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] font-semibold text-[#4A3869] dark:text-white/70">' +
+            '<span class="text-[#140826] dark:text-white/90 font-bold">Typical Junction Flow:</span>' +
+            '<span class="inline-flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-500"></span><span>Free</span></span>' +
+            '<span class="inline-flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-amber-500"></span><span>Slow</span></span>' +
+            '<span class="inline-flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-rose-500"></span><span>Choke</span></span>' +
+            '</div></div>' +
             '<div class="space-y-2.5">' +
             leftListHtml +
             '</div></aside>' +
@@ -1345,17 +1496,34 @@
             '<div class="rounded-3xl p-5 sm:p-7 bg-white dark:bg-[#160C28] border border-[#6B00B6]/15 dark:border-white/12 shadow-sm">' +
             '<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4 pb-5 border-b border-[#6B00B6]/10 dark:border-white/10">' +
             '<div>' +
-            '<div class="flex items-center gap-2 text-xs font-semibold text-[#9E7B1C] dark:text-[#D4AF37] mb-1">' +
+            '<div class="flex flex-wrap items-center gap-2 text-xs font-semibold text-[#9E7B1C] dark:text-[#D4AF37] mb-1">' +
             '<svg class="w-3.5 h-3.5 text-[#6B00B6] dark:text-[#D4AF37]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>' +
             '<span>' +
             escapeHtml(copy.activeRouteQuest) +
             '</span><span aria-hidden="true">·</span><span>' +
             (state.lang === 'pcm' ? 'PH Pidgin Mode' : 'English Mode') +
             '</span></div>' +
+            '<div class="flex flex-wrap items-center gap-2.5">' +
             '<h2 class="text-xl sm:text-2xl font-extrabold text-[#140826] dark:text-white leading-tight">' +
             escapeHtml(activeRouteItem.area) +
             '</h2>' +
-            '<p class="mt-1 text-xs text-[#4A3869] dark:text-white/65">' +
+            '<span title="Typical Junction Flow: ' +
+            escapeHtml(activeTrafficInfo.label + ' — ' + activeTrafficInfo.note) +
+            '" class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md text-xs font-semibold border ' +
+            activeTrafficInfo.pillClass +
+            '">' +
+            '<span class="w-2 h-2 rounded-full ' +
+            activeTrafficInfo.dotClass +
+            '"></span>' +
+            '<span>' +
+            escapeHtml(activeTrafficInfo.label) +
+            '</span></span></div>' +
+            '<p class="mt-1 text-xs font-medium ' +
+            activeTrafficInfo.textClass +
+            '">Typical Junction Flow: ' +
+            escapeHtml(activeTrafficInfo.note) +
+            '</p>' +
+            '<p class="mt-0.5 text-xs text-[#4A3869] dark:text-white/65">' +
             escapeHtml(activeRouteItem.keywords.join(' · ')) +
             '</p></div>' +
             '<div class="flex items-center gap-2 shrink-0">' +
